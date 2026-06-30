@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sivasakthi S – IT Student & Software Developer. Portfolio showcasing projects, skills, and certifications." />
+  <meta name="keywords" content="Sivasakthi, portfolio, software developer, Java, Python, Flask, web developer" />
+  <meta name="author" content="Sivasakthi S" />
+  <title>Sivasakthi S — Developer Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode" data-theme="dark">
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-text">SS</span>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span>SS<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#github" class="nav-link">GitHub</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="https://github.com/sivasakthi-s" target="_blank" rel="noopener" class="nav-link nav-github">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-moon" id="themeIcon" aria-hidden="true"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" aria-label="Hero section">
+      <canvas class="particle-canvas" id="particleCanvas" aria-hidden="true"></canvas>
+      <div class="hero-bg-glow" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-text" data-animate="fade-left">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Sivasakthi <span class="gradient-text">S</span></h1>
+          <div class="hero-title-wrap">
+            <span class="hero-title-prefix">I'm a </span>
+            <span class="typing-text" id="typingText" aria-live="polite"></span>
+            <span class="typing-cursor" aria-hidden="true">|</span>
+          </div>
+          <p class="hero-description">
+            Passionate IT student crafting elegant digital experiences through clean code and creative problem-solving.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary ripple">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Hire Me
+            </a>
+            <a href="#" class="btn btn-secondary ripple" id="downloadResume" aria-label="Download Resume PDF">
+              <i class="fas fa-download" aria-hidden="true"></i> Resume
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/sivasakthi-s" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub Profile">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com/in/sivasakthi-s-69437a318" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:siva13042006@gmail.com" class="social-icon" aria-label="Email">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap" data-animate="fade-right">
+          <div class="hero-image-ring" aria-hidden="true"></div>
+          <div class="hero-image-glow" aria-hidden="true"></div>
+          <div class="hero-avatar">
+            <span class="avatar-initials">SS</span>
+          </div>
+          <div class="floating-badge badge-1" aria-hidden="true">
+            <i class="fab fa-java"></i> Java
+          </div>
+          <div class="floating-badge badge-2" aria-hidden="true">
+            <i class="fab fa-python"></i> Python
+          </div>
+          <div class="floating-badge badge-3" aria-hidden="true">
+            <i class="fas fa-flask"></i> Flask
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag">Get to know me</span>
+          <h2 class="section-title" id="about-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image-col" data-animate="fade-right">
+            <div class="about-image-frame">
+              <div class="about-avatar">
+                <span>SS</span>
+              </div>
+              <div class="about-image-accent" aria-hidden="true"></div>
+            </div>
+            <div class="about-info-card glass-card">
+              <div class="info-row">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <span>Tamil Nadu, India</span>
+              </div>
+              <div class="info-row">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                <span>B.Tech – Information Technology</span>
+              </div>
+              <div class="info-row">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <span>siva13042006@gmail.com</span>
+              </div>
+              <div class="info-row">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <span>+91 6381262411</span>
+              </div>
+              <div class="info-row">
+                <i class="fas fa-language" aria-hidden="true"></i>
+                <span>Tamil, English</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text-col" data-animate="fade-left">
+            <h3 class="about-subtitle">Software Developer & IT Student</h3>
+            <p class="about-bio">
+              I am Sivasakthi Sivalingam, currently pursuing a B.Tech in Information Technology. I have hands-on experience in
+              Java, HTML, CSS, and JavaScript, along with basic knowledge of Python and databases. I've built full-stack projects
+              including a Village Sattam Web Application deployed on Render. I am passionate about software development and
+              constantly exploring new technologies and frameworks.
+            </p>
+            <p class="about-bio">
+              My career objective is to secure a position in a progressive organization where I can contribute my technical
+              knowledge, continue to grow as a developer, and make a meaningful impact through innovative software solutions.
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat-card glass-card">
+                <span class="stat-number" data-count="4">0</span>
+                <span class="stat-label">Projects Built</span>
+              </div>
+              <div class="stat-card glass-card">
+                <span class="stat-number" data-count="5">0</span>
+                <span class="stat-label">Technologies</span>
+              </div>
+              <div class="stat-card glass-card">
+                <span class="stat-number" data-count="2">0</span>
+                <span class="stat-label">Languages Spoken</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag">What I work with</span>
+          <h2 class="section-title" id="skills-title">Technical <span class="gradient-text">Skills</span></h2>
+        </div>
+
+        <div class="skills-layout">
+
+          <!-- Programming Languages -->
+          <div class="skills-group" data-animate="fade-up">
+            <div class="skills-group-header">
+              <i class="fas fa-code" aria-hidden="true"></i>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Java</span><span>85%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="85" style="--skill-color:#f89820"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Python</span><span>65%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="65" style="--skill-color:#3776ab"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>HTML &amp; CSS</span><span>90%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="90" style="--skill-color:#e44d26"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>JavaScript</span><span>70%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="70" style="--skill-color:#f7df1e"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frameworks -->
+          <div class="skills-group" data-animate="fade-up" style="--delay:0.1s">
+            <div class="skills-group-header">
+              <i class="fas fa-layer-group" aria-hidden="true"></i>
+              <h3>Frameworks &amp; Libraries</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="chip chip-blue"><i class="fab fa-react"></i> React</span>
+              <span class="chip chip-green"><i class="fas fa-flask"></i> Flask</span>
+              <span class="chip chip-purple"><i class="fas fa-paint-brush"></i> GrapesJS</span>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="skills-group" data-animate="fade-up" style="--delay:0.2s">
+            <div class="skills-group-header">
+              <i class="fas fa-database" aria-hidden="true"></i>
+              <h3>Database</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="chip chip-green"><i class="fas fa-leaf"></i> MongoDB</span>
+              <span class="chip chip-orange"><i class="fas fa-server"></i> MySQL</span>
+              <span class="chip chip-blue"><i class="fas fa-cube"></i> NoSQL</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skills-group" data-animate="fade-up" style="--delay:0.3s">
+            <div class="skills-group-header">
+              <i class="fas fa-tools" aria-hidden="true"></i>
+              <h3>Tools &amp; Technologies</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="chip chip-blue"><i class="fas fa-code"></i> VS Code</span>
+              <span class="chip chip-orange"><i class="fas fa-plug"></i> XAMPP</span>
+              <span class="chip chip-purple"><i class="fas fa-circle"></i> Eclipse</span>
+              <span class="chip chip-green"><i class="fas fa-robot"></i> ChatGPT</span>
+              <span class="chip chip-blue"><i class="fab fa-github"></i> GitHub Copilot</span>
+              <span class="chip chip-cyan"><i class="fas fa-palette"></i> Canva AI</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skills-group skills-group-full" data-animate="fade-up" style="--delay:0.4s">
+            <div class="skills-group-header">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+              <h3>Soft Skills</h3>
+            </div>
+            <div class="soft-skill-cards">
+              <div class="soft-card glass-card">
+                <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                <span>Problem Solving</span>
+              </div>
+              <div class="soft-card glass-card">
+                <i class="fas fa-users" aria-hidden="true"></i>
+                <span>Teamwork</span>
+              </div>
+              <div class="soft-card glass-card">
+                <i class="fas fa-paint-brush" aria-hidden="true"></i>
+                <span>Creativity</span>
+              </div>
+              <div class="soft-card glass-card">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <span>Innovation</span>
+              </div>
+              <div class="soft-card glass-card">
+                <i class="fas fa-bolt" aria-hidden="true"></i>
+                <span>Quick Learning</span>
+              </div>
+              <div class="soft-card glass-card">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                <span>Time Management</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education" aria-labelledby="edu-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag">Academic background</span>
+          <h2 class="section-title" id="edu-title">My <span class="gradient-text">Education</span></h2>
+        </div>
+
+        <div class="timeline" role="list">
+          <div class="timeline-item" data-animate="fade-right" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-tag">Current</div>
+              <h3>B.Tech – Information Technology</h3>
+              <p class="timeline-institution">
+                <i class="fas fa-university" aria-hidden="true"></i>
+                Shree Venkateshwara Hi-Tech Engineering College
+              </p>
+              <p class="timeline-year">
+                <i class="fas fa-calendar" aria-hidden="true"></i>
+                2023 – 2027 (Pursuing)
+              </p>
+              <p class="timeline-desc">
+                Studying core computer science subjects with a focus on full-stack development, object-oriented programming, databases, and cloud deployment.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-item-right" data-animate="fade-left" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">
+              <i class="fas fa-school"></i>
+            </div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-tag timeline-tag-done">Completed</div>
+              <h3>Higher Secondary Certificate (HSC)</h3>
+              <p class="timeline-institution">
+                <i class="fas fa-building" aria-hidden="true"></i>
+                Government Higher Secondary School, Pulikarai
+              </p>
+              <p class="timeline-year">
+                <i class="fas fa-calendar" aria-hidden="true"></i>
+                2022 – 2023
+              </p>
+              <div class="timeline-score">
+                <span class="score-label">Score</span>
+                <span class="score-value">71.3%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section-alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag">What I've built</span>
+          <h2 class="section-title" id="projects-title">My <span class="gradient-text">Projects</span></h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card glass-card" data-animate="fade-up" style="--delay:0s">
+            <div class="project-img" style="background: linear-gradient(135deg,#0f3460,#16213e)">
+              <i class="fas fa-village" aria-hidden="true" style="font-size:2.5rem;color:#3B82F6"></i>
+              <i class="fas fa-globe-asia" aria-hidden="true" style="font-size:2.5rem;color:#8B5CF6"></i>
+            </div>
+            <div class="project-content">
+              <div class="project-status live">Live</div>
+              <h3>Village Sattam Web Application</h3>
+              <p>Full-stack web app providing digital village governance services and public information access. Deployed on Render for real-time access.</p>
+              <div class="project-tags">
+                <span>Flask</span><span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://village-sattam-project-2.onrender.com" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a href="https://github.com/sivasakthi-s" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" data-animate="fade-up" style="--delay:0.1s">
+            <div class="project-img" style="background: linear-gradient(135deg,#1a1a2e,#16213e)">
+              <i class="fas fa-utensils" aria-hidden="true" style="font-size:2.5rem;color:#f97316"></i>
+            </div>
+            <div class="project-content">
+              <div class="project-status">Personal</div>
+              <h3>Food Delivery Website</h3>
+              <p>Java-based Student Management System using OOP. Implements full CRUD operations to efficiently manage student records with clean, modular architecture.</p>
+              <div class="project-tags">
+                <span>Java</span><span>OOP</span><span>CRUD</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/sivasakthi-s" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" data-animate="fade-up" style="--delay:0.2s">
+            <div class="project-img" style="background: linear-gradient(135deg,#1a0533,#16213e)">
+              <i class="fas fa-film" aria-hidden="true" style="font-size:2.5rem;color:#a855f7"></i>
+            </div>
+            <div class="project-content">
+              <div class="project-status">Personal</div>
+              <h3>Tamil Actor Info Webpage</h3>
+              <p>Responsive actor information webpage showcasing the profile, biography, and movie gallery of Tamil actor Vijay with a clean, user-friendly UI.</p>
+              <div class="project-tags">
+                <span>React</span><span>HTML</span><span>CSS</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/sivasakthi-s" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" data-animate="fade-up" style="--delay:0.3s">
+            <div class="project-img" style="background: linear-gradient(135deg,#0c1a10,#16213e)">
+              <i class="fas fa-car" aria-hidden="true" style="font-size:2.5rem;color:#22c55e"></i>
+            </div>
+            <div class="project-content">
+              <div class="project-status">Personal</div>
+              <h3>Uber Ride Management System</h3>
+              <p>Full-stack web app using Flask and MySQL to manage ride and rider information with CRUD functionality, search, and a responsive admin dashboard.</p>
+              <div class="project-tags">
+                <span>Flask</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JS</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/sivasakthi-s" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section" id="certifications" aria-labelledby="cert-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag">Achievements</span>
+          <h2 class="section-title" id="cert-title">My <span class="gradient-text">Certifications</span></h2>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert-card glass-card" data-animate="fade-up">
+            <div class="cert-icon" style="--cert-color:#f89820">
+              <i class="fab fa-java" aria-hidden="true"></i>
+            </div>
+            <div class="cert-content">
+              <h3>Java Programming</h3>
+              <p>Object-Oriented Programming Fundamentals</p>
+              <span class="cert-org">Self-Study / Practice Projects</span>
+            </div>
+            <div class="cert-badge" aria-hidden="true"><i class="fas fa-award"></i></div>
+          </div>
+
+          <div class="cert-card glass-card" data-animate="fade-up" style="--delay:0.1s">
+            <div class="cert-icon" style="--cert-color:#3776ab">
+              <i class="fab fa-python" aria-hidden="true"></i>
+            </div>
+            <div class="cert-content">
+              <h3>Python &amp; Flask Development</h3>
+              <p>Web Application Development with Flask</p>
+              <span class="cert-org">Project-Based Learning</span>
+            </div>
+            <div class="cert-badge" aria-hidden="true"><i class="fas fa-award"></i></div>
+          </div>
+
+          <div class="cert-card glass-card" data-animate="fade-up" style="--delay:0.2s">
+            <div class="cert-icon" style="--cert-color:#e44d26">
+              <i class="fab fa-html5" aria-hidden="true"></i>
+            </div>
+            <div class="cert-content">
+              <h3>Frontend Development</h3>
+              <p>HTML5, CSS3 &amp; JavaScript</p>
+              <span class="cert-org">Hands-On Projects</span>
+            </div>
+            <div class="cert-badge" aria-hidden="true"><i class="fas fa-award"></i></div>
+          </div>
+
+          <div class="cert-card glass-card" data-animate="fade-up" style="--delay:0.3s">
+            <div class="cert-icon" style="--cert-color:#4db33d">
+              <i class="fas fa-database" aria-hidden="true"></i>
+            </div>
+            <div class="cert-content">
+              <h3>Database Management</h3>
+              <p>MongoDB &amp; MySQL</p>
+              <span class="cert-org">Practical Application</span>
+            </div>
+            <div class="cert-badge" aria-hidden="true"><i class="fas fa-award"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section class="section section-alt" id="github" aria-labelledby="github-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag">Open source</span>
+          <h2 class="section-title" id="github-title">My <span class="gradient-text">GitHub</span></h2>
+        </div>
+
+        <div class="github-card glass-card" data-animate="zoom">
+          <div class="github-profile">
+            <div class="github-avatar">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </div>
+            <div class="github-info">
+              <h3>sivasakthi-s</h3>
+              <p>IT Student | Software Developer | Building full-stack web apps with Java, Python &amp; Flask</p>
+            </div>
+          </div>
+
+          <div class="github-stats">
+            <div class="github-stat">
+              <span class="github-stat-number">4+</span>
+              <span class="github-stat-label">Repositories</span>
+            </div>
+            <div class="github-stat">
+              <span class="github-stat-number">
+                <i class="fab fa-java" aria-hidden="true"></i>
+              </span>
+              <span class="github-stat-label">Top Language</span>
+            </div>
+            <div class="github-stat">
+              <span class="github-stat-number">Active</span>
+              <span class="github-stat-label">Status</span>
+            </div>
+          </div>
+
+          <div class="github-contribution-placeholder" aria-label="GitHub contribution placeholder">
+            <div class="contrib-grid" aria-hidden="true" id="contribGrid"></div>
+            <p class="contrib-label">Contribution activity (simulated)</p>
+          </div>
+
+          <a href="https://github.com/sivasakthi-s" target="_blank" rel="noopener" class="btn btn-primary ripple">
+            <i class="fab fa-github" aria-hidden="true"></i> View GitHub Profile
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag">Let's connect</span>
+          <h2 class="section-title" id="contact-title">Get In <span class="gradient-text">Touch</span></h2>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info" data-animate="fade-right">
+            <p class="contact-intro">
+              I'm currently open to internship opportunities and software development roles. Whether you have a question, a project idea, or just want to say hello — my inbox is always open!
+            </p>
+
+            <div class="contact-links">
+              <a href="mailto:siva13042006@gmail.com" class="contact-link glass-card">
+                <div class="contact-link-icon" style="--icon-color:#3B82F6">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <span class="contact-link-label">Email</span>
+                  <span class="contact-link-value">siva13042006@gmail.com</span>
+                </div>
+              </a>
+              <a href="tel:+916381262411" class="contact-link glass-card">
+                <div class="contact-link-icon" style="--icon-color:#22c55e">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <span class="contact-link-label">Phone</span>
+                  <span class="contact-link-value">+91 6381262411</span>
+                </div>
+              </a>
+              <a href="https://linkedin.com/in/sivasakthi-s-69437a318" target="_blank" rel="noopener" class="contact-link glass-card">
+                <div class="contact-link-icon" style="--icon-color:#0077b5">
+                  <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <span class="contact-link-label">LinkedIn</span>
+                  <span class="contact-link-value">sivasakthi-s-69437a318</span>
+                </div>
+              </a>
+              <a href="https://github.com/sivasakthi-s" target="_blank" rel="noopener" class="contact-link glass-card">
+                <div class="contact-link-icon" style="--icon-color:#8B5CF6">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <span class="contact-link-label">GitHub</span>
+                  <span class="contact-link-value">sivasakthi-s</span>
+                </div>
+              </a>
+              <div class="contact-link glass-card" style="cursor:default">
+                <div class="contact-link-icon" style="--icon-color:#f97316">
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <span class="contact-link-label">Location</span>
+                  <span class="contact-link-value">Tamil Nadu, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap" data-animate="fade-left">
+            <form class="contact-form glass-card" id="contactForm" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label for="contactName">Your Name</label>
+                <input type="text" id="contactName" name="name" placeholder="John Doe" required autocomplete="name" />
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Your Email</label>
+                <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required autocomplete="email" />
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="contactSubject">Subject</label>
+                <input type="text" id="contactSubject" name="subject" placeholder="Job Opportunity / Internship" />
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full ripple">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
+              </button>
+              <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+                <i class="fas fa-check-circle" aria-hidden="true"></i> Message sent successfully!
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-bracket">&lt;</span>SS<span class="logo-bracket">/&gt;</span>
+          <p>Crafting digital experiences with clean code.</p>
+        </div>
+        <div class="footer-socials" aria-label="Social links">
+          <a href="https://github.com/sivasakthi-s" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://linkedin.com/in/sivasakthi-s-69437a318" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:siva13042006@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p class="footer-copy">&copy; 2025 Sivasakthi S. All rights reserved.</p>
+      </div>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
