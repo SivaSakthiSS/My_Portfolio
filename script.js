@@ -99,17 +99,17 @@ navMenu.querySelectorAll('.nav-link').forEach(link => {
 // ── Dark / Light Mode ─────────────────────────────
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon   = document.getElementById('themeIcon');
-let   isDark      = true;
+let   isDark      = false;
 
 themeToggle.addEventListener('click', () => {
   isDark = !isDark;
   document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  themeIcon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+  themeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
 });
 
 // ── Typing Effect ─────────────────────────────────
 const typingEl    = document.getElementById('typingText');
-const typingWords = ['Software Developer', 'Java Programmer', 'Full-Stack Learner', 'Problem Solver', 'IT Student'];
+const typingWords = ['Software Developer', 'Java Programmer', 'Spring Boot Learner', 'Problem Solver', 'IT Student'];
 let   wordIndex   = 0;
 let   charIndex   = 0;
 let   isDeleting  = false;
@@ -234,7 +234,7 @@ function animateCounters() {
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(59,130,246,${p.alpha})`;
+      ctx.fillStyle = `rgba(177,74,44,${p.alpha})`;
       ctx.fill();
     });
 
@@ -247,7 +247,7 @@ function animateCounters() {
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = `rgba(59,130,246,${0.08 * (1 - dist / 120)})`;
+          ctx.strokeStyle = `rgba(177,74,44,${0.08 * (1 - dist / 120)})`;
           ctx.lineWidth   = 0.5;
           ctx.stroke();
         }
@@ -265,11 +265,11 @@ function animateCounters() {
   const grid  = document.getElementById('contribGrid');
   const cells = 52 * 7;
   const levels = [
-    'rgba(255,255,255,0.04)',
-    'rgba(59,130,246,0.2)',
-    'rgba(59,130,246,0.4)',
-    'rgba(59,130,246,0.65)',
-    'rgba(59,130,246,0.9)',
+    'rgba(28,26,22,0.06)',
+    'rgba(177,74,44,0.18)',
+    'rgba(177,74,44,0.38)',
+    'rgba(177,74,44,0.62)',
+    'rgba(177,74,44,0.9)',
   ];
 
   for (let i = 0; i < cells; i++) {

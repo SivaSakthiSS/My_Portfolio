@@ -11,14 +11,14 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Source+Serif+4:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="dark-mode" data-theme="dark">
+<body class="light-mode" data-theme="light">
 
   <!-- Custom Cursor -->
   <div class="cursor-dot" id="cursorDot"></div>
@@ -39,7 +39,7 @@
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#home" class="nav-logo" aria-label="Home">
-        <span class="logo-bracket">&lt;</span>SS<span class="logo-bracket">/&gt;</span>
+        Sivasakthi<span class="logo-dot">.</span>
       </a>
 
       <ul class="nav-menu" id="navMenu" role="list">
@@ -47,8 +47,9 @@
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#projects" class="nav-link">Work</a></li>
+        <li><a href="#certifications" class="nav-link">Certificates</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
         <li><a href="#github" class="nav-link">GitHub</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
         <li>
@@ -78,23 +79,22 @@
 
       <div class="hero-content">
         <div class="hero-text" data-animate="fade-left">
-          <p class="hero-greeting">Hello, I'm</p>
+          <p class="hero-greeting">Portfolio — Issue No. 01</p>
           <h1 class="hero-name">Sivasakthi <span class="gradient-text">S</span></h1>
           <div class="hero-title-wrap">
-            <span class="hero-title-prefix">I'm a </span>
+            <span class="hero-title-prefix">A </span>
             <span class="typing-text" id="typingText" aria-live="polite"></span>
-            <span class="typing-cursor" aria-hidden="true">|</span>
           </div>
           <p class="hero-description">
-            Passionate IT student crafting elegant digital experiences through clean code and creative problem-solving.
+            An IT student writing code the way she'd write a good sentence — clearly, with intention, and a little craft. Currently building full-stack web applications and learning Spring Boot.
           </p>
 
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary ripple">
-              <i class="fas fa-paper-plane" aria-hidden="true"></i> Hire Me
+              Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
-            <a href="#" class="btn btn-secondary ripple" id="downloadResume" aria-label="Download Resume PDF">
-              <i class="fas fa-download" aria-hidden="true"></i> Resume
+            <a href="assets/SIVASAKTHI_S_Resume.pdf" target="_blank" rel="noopener" class="btn btn-secondary ripple" id="downloadResume" aria-label="View Resume PDF">
+              Read résumé
             </a>
           </div>
 
@@ -113,19 +113,10 @@
 
         <div class="hero-image-wrap" data-animate="fade-right">
           <div class="hero-image-ring" aria-hidden="true"></div>
-          <div class="hero-image-glow" aria-hidden="true"></div>
           <div class="hero-avatar">
             <span class="avatar-initials">SS</span>
           </div>
-          <div class="floating-badge badge-1" aria-hidden="true">
-            <i class="fab fa-java"></i> Java
-          </div>
-          <div class="floating-badge badge-2" aria-hidden="true">
-            <i class="fab fa-python"></i> Python
-          </div>
-          <div class="floating-badge badge-3" aria-hidden="true">
-            <i class="fas fa-flask"></i> Flask
-          </div>
+          <div class="hero-caption">Fig. 1 — Sivasakthi S, 2026</div>
         </div>
       </div>
 
@@ -196,7 +187,7 @@
                 <span class="stat-label">Projects Built</span>
               </div>
               <div class="stat-card glass-card">
-                <span class="stat-number" data-count="5">0</span>
+                <span class="stat-number" data-count="6">0</span>
                 <span class="stat-label">Technologies</span>
               </div>
               <div class="stat-card glass-card">
@@ -270,6 +261,7 @@
             <div class="skill-chips">
               <span class="chip chip-blue"><i class="fab fa-react"></i> React</span>
               <span class="chip chip-green"><i class="fas fa-flask"></i> Flask</span>
+              <span class="chip chip-green"><i class="fas fa-leaf"></i> Spring Boot</span>
               <span class="chip chip-purple"><i class="fas fa-paint-brush"></i> GrapesJS</span>
             </div>
           </div>
@@ -407,9 +399,9 @@
         <div class="projects-grid">
 
           <article class="project-card glass-card" data-animate="fade-up" style="--delay:0s">
-            <div class="project-img" style="background: linear-gradient(135deg,#0f3460,#16213e)">
-              <i class="fas fa-village" aria-hidden="true" style="font-size:2.5rem;color:#3B82F6"></i>
-              <i class="fas fa-globe-asia" aria-hidden="true" style="font-size:2.5rem;color:#8B5CF6"></i>
+            <div class="project-img" style="background: linear-gradient(135deg,#EDE3CC,#E3D7B8)">
+              <i class="fas fa-village" aria-hidden="true" style="font-size:2.5rem;color:#2D4A3E"></i>
+              <i class="fas fa-globe-asia" aria-hidden="true" style="font-size:2.5rem;color:#B14A2C"></i>
             </div>
             <div class="project-content">
               <div class="project-status live">Live</div>
@@ -430,8 +422,8 @@
           </article>
 
           <article class="project-card glass-card" data-animate="fade-up" style="--delay:0.1s">
-            <div class="project-img" style="background: linear-gradient(135deg,#1a1a2e,#16213e)">
-              <i class="fas fa-utensils" aria-hidden="true" style="font-size:2.5rem;color:#f97316"></i>
+            <div class="project-img" style="background: linear-gradient(135deg,#E8E0CE,#DDD2B5)">
+              <i class="fas fa-utensils" aria-hidden="true" style="font-size:2.5rem;color:#B14A2C"></i>
             </div>
             <div class="project-content">
               <div class="project-status">Personal</div>
@@ -449,8 +441,8 @@
           </article>
 
           <article class="project-card glass-card" data-animate="fade-up" style="--delay:0.2s">
-            <div class="project-img" style="background: linear-gradient(135deg,#1a0533,#16213e)">
-              <i class="fas fa-film" aria-hidden="true" style="font-size:2.5rem;color:#a855f7"></i>
+            <div class="project-img" style="background: linear-gradient(135deg,#E6DCC8,#DAD0B4)">
+              <i class="fas fa-film" aria-hidden="true" style="font-size:2.5rem;color:#B14A2C"></i>
             </div>
             <div class="project-content">
               <div class="project-status">Personal</div>
@@ -468,8 +460,8 @@
           </article>
 
           <article class="project-card glass-card" data-animate="fade-up" style="--delay:0.3s">
-            <div class="project-img" style="background: linear-gradient(135deg,#0c1a10,#16213e)">
-              <i class="fas fa-car" aria-hidden="true" style="font-size:2.5rem;color:#22c55e"></i>
+            <div class="project-img" style="background: linear-gradient(135deg,#E4DCC9,#D8CEB1)">
+              <i class="fas fa-car" aria-hidden="true" style="font-size:2.5rem;color:#2D4A3E"></i>
             </div>
             <div class="project-content">
               <div class="project-status">Personal</div>
@@ -550,6 +542,36 @@
       </div>
     </section>
 
+    <!-- Resume Section -->
+    <section class="section section-alt" id="resume" aria-labelledby="resume-title">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-tag">My credentials</span>
+          <h2 class="section-title" id="resume-title">My <span class="gradient-text">Resume</span></h2>
+        </div>
+
+        <div class="resume-wrap glass-card" data-animate="zoom">
+          <div class="resume-preview">
+            <object data="assets/SIVASAKTHI_S_Resume.pdf" type="application/pdf" class="resume-object" aria-label="Resume preview">
+              <p class="resume-fallback">
+                Your browser can't preview PDFs here.
+                <a href="assets/SIVASAKTHI_S_Resume.pdf" target="_blank" rel="noopener">Open the resume directly</a>.
+              </p>
+            </object>
+          </div>
+
+          <div class="resume-actions">
+            <a href="assets/SIVASAKTHI_S_Resume.pdf" target="_blank" rel="noopener" class="btn btn-primary ripple">
+              <i class="fas fa-eye" aria-hidden="true"></i> View Resume
+            </a>
+            <a href="assets/SIVASAKTHI_S_Resume.pdf" download="Sivasakthi_S_Resume.pdf" class="btn btn-secondary ripple">
+              <i class="fas fa-download" aria-hidden="true"></i> Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- GitHub Section -->
     <section class="section section-alt" id="github" aria-labelledby="github-title">
       <div class="container">
@@ -615,7 +637,7 @@
 
             <div class="contact-links">
               <a href="mailto:siva13042006@gmail.com" class="contact-link glass-card">
-                <div class="contact-link-icon" style="--icon-color:#3B82F6">
+                <div class="contact-link-icon" style="--icon-color:#2D4A3E">
                   <i class="fas fa-envelope" aria-hidden="true"></i>
                 </div>
                 <div>
@@ -624,7 +646,7 @@
                 </div>
               </a>
               <a href="tel:+916381262411" class="contact-link glass-card">
-                <div class="contact-link-icon" style="--icon-color:#22c55e">
+                <div class="contact-link-icon" style="--icon-color:#2D4A3E">
                   <i class="fas fa-phone" aria-hidden="true"></i>
                 </div>
                 <div>
@@ -642,7 +664,7 @@
                 </div>
               </a>
               <a href="https://github.com/sivasakthi-s" target="_blank" rel="noopener" class="contact-link glass-card">
-                <div class="contact-link-icon" style="--icon-color:#8B5CF6">
+                <div class="contact-link-icon" style="--icon-color:#B14A2C">
                   <i class="fab fa-github" aria-hidden="true"></i>
                 </div>
                 <div>
@@ -651,7 +673,7 @@
                 </div>
               </a>
               <div class="contact-link glass-card" style="cursor:default">
-                <div class="contact-link-icon" style="--icon-color:#f97316">
+                <div class="contact-link-icon" style="--icon-color:#B14A2C">
                   <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                 </div>
                 <div>
@@ -703,7 +725,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <span class="logo-bracket">&lt;</span>SS<span class="logo-bracket">/&gt;</span>
+          Sivasakthi<span class="logo-dot">.</span>
           <p>Crafting digital experiences with clean code.</p>
         </div>
         <div class="footer-socials" aria-label="Social links">
